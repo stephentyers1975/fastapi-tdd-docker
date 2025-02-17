@@ -1,6 +1,9 @@
 # pull official base image
 FROM python:3.12.1-slim-bookworm
 
+# Link Docker file to github repo
+LABEL org.opencontainers.image.source https://github.com/stephentyers195/fastapi-tdd-docker
+
 # create directory for the app user
 RUN mkdir -p /home/app
 
