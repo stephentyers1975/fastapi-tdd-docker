@@ -2,7 +2,7 @@
 FROM python:3.12.1-slim-bookworm
 
 # Link Docker file to github repo
-LABEL org.opencontainers.image.source https://github.com/stephentyers195/fastapi-tdd-docker
+LABEL org.opencontainers.image.source=https://github.com/stephentyers1975/fastapi-tdd-docker
 
 # create directory for the app user
 RUN mkdir -p /home/app
@@ -17,10 +17,10 @@ RUN mkdir $APP_HOME
 WORKDIR $APP_HOME
 
 # set environment variables
-ENV PYTHONDONTWRITEBYTECODE 1
-ENV PYTHONUNBUFFERED 1
-ENV ENVIRONMENT prod
-ENV TESTING 0
+ENV PYTHONDONTWRITEBYTECODE=1
+ENV PYTHONUNBUFFERED=1
+ENV ENVIRONMENT=prod
+ENV TESTING=0
 
 # install system dependencies
 RUN apt-get update \
